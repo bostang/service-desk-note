@@ -59,10 +59,10 @@ const NoteDetail = ({ note, index, selectedDate, onGoBack }) => {
           </div>
         )}
         <div className="mb-3">
-          <strong>Waktu Mulai:</strong> {new Date(note.startTime).toLocaleString('id-ID')}
+          <strong>Waktu Mulai:</strong> {new Date(note.startTime).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })}
         </div>
         <div className="mb-3">
-          <strong>Waktu Selesai:</strong> {new Date(note.stopTime).toLocaleString('id-ID')}
+          <strong>Waktu Selesai:</strong> {new Date(note.stopTime).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta' })}
         </div>
         <div className="d-flex justify-content-between mt-4">
           <button className="btn btn-secondary" onClick={onGoBack}>

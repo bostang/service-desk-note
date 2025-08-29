@@ -11,10 +11,13 @@ function App() {
   const [currentPage, setCurrentPage] = useState('landing');
   const [selectedDate, setSelectedDate] = useState(null);
   const [startTime, setStartTime] = useState(null);
+  const [showCheatsheet, setShowCheatsheet] = useState(false);
+  const [showKnowledge, setShowKnowledge] = useState(false);
 
   const handleCreateNote = () => {
-    const jakartaTime = new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Jakarta' }).replace(' ', 'T') + 'Z';
-    setStartTime(jakartaTime);
+    // Ambil waktu saat ini dan simpan sebagai string ISO
+    const currentTime = new Date().toISOString(); 
+    setStartTime(currentTime);
     setCurrentPage('create');
   };
 
@@ -37,9 +40,17 @@ function App() {
     setCurrentPage('list');
   };
 
+  const toggleCheatsheet = () => setShowCheatsheet(!showCheatsheet);
+  const toggleKnowledge = () => setShowKnowledge(!showKnowledge);
+
   return (
     <div>
-      <ExtensionList />
+      <ExtensionList 
+        showCheatsheet={showCheatsheet} 
+        toggleCheatsheet={toggleCheatsheet}
+        showKnowledge={showKnowledge}
+        toggleKnowledge={toggleKnowledge}
+      />
 
       {currentPage === 'landing' && <LandingPage onCreateNote={handleCreateNote} onViewNotes={handleViewNotes} />}
       {currentPage === 'create' && <NoteForm startTime={startTime} onSave={handleSaveNote} onGoBack={handleGoBack} />}

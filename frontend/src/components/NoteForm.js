@@ -26,12 +26,14 @@ const NoteForm = ({ startTime, onSave, onGoBack }) => {
   const generateWhatsAppMessage = (data) => {
     let message = `Selamat Sore Rekan Analis, mohon di bantu laporan Cabang berikut ini :
 
-*NPP*: ${data.npp}
-*Aplikasi*: ${data.aplikasi || '...'}
-*Kendala*: ${data.kendala}
-*Unit/Cabang*: ${data.cabang}
-*No. PIC*: ${data.noTelpPic}
-`;
+  *Nama*: ${data.nama}
+  *NPP*: ${data.npp}
+  *Cabang*: ${data.cabang}
+  *Aplikasi*: ${data.aplikasi || '...'}
+  *Kendala*: ${data.kendala}
+  *Unit/Cabang*: ${data.cabang}
+  *No. PIC*: ${data.noTelpPic}
+  `;
 
     // Tambahkan extra fields secara dinamis
     data.extraFields.forEach(field => {
@@ -44,8 +46,7 @@ const NoteForm = ({ startTime, onSave, onGoBack }) => {
       message += `\n*Catatan Tambahan*:\n${data.catatanTambahan}`;
     }
 
-    message += `\n\nDemikian dan Terima kasih
-Command Center`;
+    message += `\n\nDemikian dan Terima kasih`;
 
     return message;
   };
@@ -87,14 +88,17 @@ Command Center`;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    const stopTime = new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Jakarta' }).replace(' ', 'T') + 'Z';
+
+    // Ambil waktu selesai sebagai string ISO
+    const stopTime = new Date().toISOString();
+
+    const extraData = extraFields.reduce((obj, item) => ({ ...obj, [item.name]: item.value }), {});
     
     const fullData = {
       ...formData,
-      extraFields, // Kirim array extraFields ke backend
+      extraFields,
       startTime,
-      stopTime
+      stopTime,
     };
 
     try {

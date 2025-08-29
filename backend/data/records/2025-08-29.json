@@ -1,91 +1,26 @@
 [
   {
-    "nama": "Bostang Palaguna",
-    "npp": "70556",
-    "cabang": "Margonda",
-    "noTelpPic": "089651524904",
-    "kendala": "Tidak mengerjakan tugas dengan baik",
-    "catatanTambahan": "Apa saja lah.",
-    "noRekening": "14045",
-    "cif": "1201177",
-    "noTelpNasabah": "089651524903"
+    "nama": "Nita",
+    "npp": "20908",
+    "cabang": "Karang anyar",
+    "noTelpPic": "08122652515",
+    "aplikasi": "Payroll",
+    "kendala": "upload payroll tetapi muncul parameter length, biasanya langsung disuruh delete . teller coba refresh tetapi pemrosesan lama. apakah aman untuk upload ulang?\n\napakah aman",
+    "catatanTambahan": "",
+    "extraFields": "",
+    "startTime": "2025-08-29T17:59:34Z",
+    "stopTime": "2025-08-29T18:02:51Z"
   },
   {
-    "nama": "Bostang Palaguna",
-    "npp": "70556",
-    "cabang": "Bekasi",
-    "noTelpPic": "089651524904",
-    "kendala": "Mengantuk",
-    "catatanTambahan": "kurang tidur",
-    "noRekening": "ABC",
-    "cif": "DEF",
-    "noTelpNasabah": "08914514",
-    "sfsf": "fsfsf",
-    "startTime": "2025-08-29T14:22:37Z",
-    "stopTime": "2025-08-29T14:23:09Z"
-  },
-  {
-    "nama": "Bostang Palaguna Sihombing",
-    "npp": "70556",
-    "cabang": "Tambun",
-    "noTelpPic": "089651524904",
-    "kendala": "Mengantuk lagi",
-    "catatanTambahan": "kurang tidur lagi",
-    "noRekening": "14045",
-    "cif": "14123442",
-    "noTelpNasabah": "089651524904",
-    "gender": "laki-laki",
-    "rasi bintang": "virgo",
-    "startTime": "2025-08-29T14:28:08Z",
-    "stopTime": "2025-08-29T14:28:55Z"
-  },
-  {
-    "nama": "bostang palaguna",
-    "npp": "42414",
-    "cabang": "bekasi",
-    "noTelpPic": "08951524",
-    "kendala": "afaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "catatanTambahan": "afaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-    "startTime": "2025-08-29T14:29:38Z",
-    "stopTime": "2025-08-29T14:29:57Z"
-  },
-  {
-    "nama": "bostang palaguna",
-    "npp": "42414",
-    "cabang": "bekasi",
-    "noTelpPic": "08951524",
-    "kendala": "afadafs",
-    "catatanTambahan": "fasfsafasfsf",
-    "startTime": "2025-08-29T14:44:44Z",
-    "stopTime": "2025-08-29T14:44:59Z"
-  },
-  {
-    "nama": "Bostang Palaguna",
-    "npp": "70556",
-    "cabang": "bekasi",
-    "noTelpPic": "08951524904",
-    "aplikasi": "BNIDirect",
-    "kendala": "Tidak mampu melakukan transaksi payroll di perusahaan PT terkait",
-    "catatanTambahan": "Belum melakukan login pada menu",
-    "extraFields": [
-      {
-        "name": "No. Rekening",
-        "value": "1406910123"
-      },
-      {
-        "name": "CIF",
-        "value": "424252343"
-      },
-      {
-        "name": "No. Telepon Nasabah",
-        "value": "6289651524904"
-      },
-      {
-        "name": "Nama Perusahaan",
-        "value": "PT Sejahtera Makmur Jaya"
-      }
-    ],
-    "startTime": "2025-08-29T17:30:14Z",
-    "stopTime": "2025-08-29T17:31:22Z"
+    "nama": "LIA",
+    "npp": "30714",
+    "cabang": "kantor siluar bogor",
+    "noTelpPic": "081386242939",
+    "aplikasi": "Teller",
+    "kendala": "Di konter teller kemarin, ada transaksi penukaran 300 dolar AS (USD) menjadi rupiah. Kas USD seharusnya disetorkan dan menjadi nol di sore hari, tetapi tidak dilakukan.\n\n---\nAkibatnya, saldo USD 300 masih menggantung hingga hari berikutnya (H+1), padahal saldo rupiah sudah dinolkan. Karena ini akhir bulan, ada kekhawatiran saldo ini akan menjadi saldo gantung di bulan berikutnya, yaitu Januari.",
+    "catatanTambahan": "",
+    "extraFields": [],
+    "startTime": "2025-08-29T18:09:34Z",
+    "stopTime": "2025-08-29T18:15:04Z"
   }
 ]

@@ -1,0 +1,62 @@
+[
+  {
+    "nama": "Bostang Palaguna",
+    "npp": "70556",
+    "cabang": "Margonda",
+    "noTelpPic": "089651524904",
+    "kendala": "Tidak mengerjakan tugas dengan baik",
+    "catatanTambahan": "Apa saja lah.",
+    "noRekening": "14045",
+    "cif": "1201177",
+    "noTelpNasabah": "089651524903"
+  },
+  {
+    "nama": "Bostang Palaguna",
+    "npp": "70556",
+    "cabang": "Bekasi",
+    "noTelpPic": "089651524904",
+    "kendala": "Mengantuk",
+    "catatanTambahan": "kurang tidur",
+    "noRekening": "ABC",
+    "cif": "DEF",
+    "noTelpNasabah": "08914514",
+    "sfsf": "fsfsf",
+    "startTime": "2025-08-29T14:22:37Z",
+    "stopTime": "2025-08-29T14:23:09Z"
+  },
+  {
+    "nama": "Bostang Palaguna Sihombing",
+    "npp": "70556",
+    "cabang": "Tambun",
+    "noTelpPic": "089651524904",
+    "kendala": "Mengantuk lagi",
+    "catatanTambahan": "kurang tidur lagi",
+    "noRekening": "14045",
+    "cif": "14123442",
+    "noTelpNasabah": "089651524904",
+    "gender": "laki-laki",
+    "rasi bintang": "virgo",
+    "startTime": "2025-08-29T14:28:08Z",
+    "stopTime": "2025-08-29T14:28:55Z"
+  },
+  {
+    "nama": "bostang palaguna",
+    "npp": "42414",
+    "cabang": "bekasi",
+    "noTelpPic": "08951524",
+    "kendala": "afaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "catatanTambahan": "afaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "startTime": "2025-08-29T14:29:38Z",
+    "stopTime": "2025-08-29T14:29:57Z"
+  },
+  {
+    "nama": "bostang palaguna",
+    "npp": "42414",
+    "cabang": "bekasi",
+    "noTelpPic": "08951524",
+    "kendala": "afadafs",
+    "catatanTambahan": "fasfsafasfsf",
+    "startTime": "2025-08-29T14:44:44Z",
+    "stopTime": "2025-08-29T14:44:59Z"
+  }
+]

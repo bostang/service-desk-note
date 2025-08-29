@@ -2,14 +2,42 @@
 
 Aplikasi web sederhana untuk mencatat kendala harian, dilengkapi dengan fitur penyimpanan data harian, tampilan, pengeditan, dan penghapusan catatan. Data disimpan dalam format JSON berdasarkan tanggal.
 
+## Tampilan Aplikasi
+
+- landing page
+
+![1756463894226](image/README/1756463894226.png)
+
+- view Note
+
+![1756463908021](image/README/1756463908021.png)
+
+- daftar note
+
+![1756463920339](image/README/1756463920339.png)
+
+- detail note
+
+![1756463948187](image/README/1756463948187.png)
+
+- create Note
+
+![1756463968086](image/README/1756463968086.png)
+
+---
+
 ## Fitur Utama
 
-- **`Create Note`**: Buat catatan baru yang secara otomatis disimpan ke file JSON untuk hari ini.
-- **`View Notes`**: Lihat semua catatan yang dibuat pada tanggal tertentu.
-- **`View Detail`**: Lihat detail lengkap dari catatan tertentu.
-- **`Edit Note`**: Ubah data catatan yang sudah ada.
+- **`Create Note`**: Buat catatan baru dengan *form* yang dinamis, memungkinkan penambahan *field* khusus dan detail nasabah secara opsional.
+- **`View Notes`**: Lihat semua catatan yang dibuat pada tanggal tertentu dalam format tabel yang ringkas.
+- **`View Detail`**: Lihat detail lengkap dari catatan tertentu, termasuk semua *field* yang ditambahkan secara dinamis.
+- **`Edit Note`**: Ubah data catatan yang sudah ada melalui *form* yang sama dengan saat pembuatan.
 - **`Delete Note`**: Hapus catatan tertentu.
-- **`Multi-Date Support`**: Navigasi dan kelola catatan dari tanggal-tanggal sebelumnya.
+- **`Multi-Date Support`**: Navigasi dan kelola catatan dari tanggal-tanggal sebelumnya dengan mudah.
+- **`Dynamic Fields`**: Tambahkan *field* kustom seperti No. Rekening, CIF, atau lainnya sesuai kebutuhan di bagian "Detail Nasabah".
+- **`WhatsApp Message Generator`**: Secara otomatis menghasilkan pesan WhatsApp yang ringkas dari data catatan yang disimpan.
+
+---
 
 ## Teknologi yang Digunakan
 
@@ -33,34 +61,35 @@ Aplikasi web sederhana untuk mencatat kendala harian, dilengkapi dengan fitur pe
 Proyek ini dibagi menjadi dua bagian utama: `frontend` (aplikasi React) dan `backend` (server Node.js).
 
 ```tree
-
 /nama-proyek
 |-- /frontend
-|   |-- /src
-|   |   |-- /components
-|   |   |   |-- DatePicker.js
-|   |   |   |-- LandingPage.js
-|   |   |   |-- NoteDetail.js
-|   |   |   |-- NoteEdit.js
-|   |   |   |-- NoteForm.js
-|   |   |   |-- NoteList.js
-|   |   |-- App.js
-|   |   |-- index.js
-|   |-- package.json
+|   |-- /src
+|   |   |-- /components
+|   |   |   |-- DatePicker.js
+|   |   |   |-- LandingPage.js
+|   |   |   |-- NoteDetail.js
+|   |   |   |-- NoteEdit.js
+|   |   |   |-- NoteForm.js
+|   |   |   |-- NoteList.js
+|   |   |-- App.js
+|   |   |-- index.js
+|   |-- package.json
 |
 |-- /backend
-|   |-- /data
-|   |   |-- 2025-08-28.json
-|   |   |-- 2025-08-29.json
-|   |-- server.js
-|   |-- package.json
+|   |-- /data
+|   |   |-- /records
+|   |   |   |-- 2025-08-28.json
+|   |   |   |-- 2025-08-29.json
+|   |   |-- specialist.json
+|   |-- server.js
+|   |-- package.json
 |
 |-- README.md
-
-````
+```
 
 - **`/frontend/src/components`**: Berisi semua komponen React yang dapat digunakan kembali.
-- **`/backend/data`**: Folder ini secara otomatis dibuat oleh server untuk menyimpan file JSON catatan harian.
+- **`/backend/data/records`**: Folder ini secara otomatis dibuat oleh server untuk menyimpan file JSON catatan harian berdasarkan tanggal.
+- **`/backend/data/specialist.json`**: File ini berisi data kontak untuk fitur tambahan seperti *autocomplete* PIC.
 
 ---
 
@@ -68,7 +97,7 @@ Proyek ini dibagi menjadi dua bagian utama: `frontend` (aplikasi React) dan `bac
 
 Ikuti langkah-langkah di bawah ini untuk menjalankan aplikasi secara lokal.
 
-### 1. Menjalankan Backend
+### 1\. Menjalankan Backend
 
 Buka terminal baru di direktori `backend`.
 
@@ -81,7 +110,7 @@ npm install
 
 # Jalankan server
 node server.js
-````
+```
 
 Server akan berjalan di `http://localhost:5000`.
 

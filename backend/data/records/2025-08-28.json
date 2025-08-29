@@ -1,0 +1,37 @@
+[
+  {
+    "nama": "Bostang Palaguna",
+    "npp": "70556",
+    "cabang": "Margonda",
+    "noTelpPic": "089651524904",
+    "kendala": "Tidak mengerjakan tugas dengan baik",
+    "catatanTambahan": "Apa saja lah.",
+    "noRekening": "14045",
+    "cif": "1201177",
+    "noTelpNasabah": "089651524904"
+  },
+  {
+    "nama": "Bostang Palaguna",
+    "npp": "70556",
+    "cabang": "Bekasi",
+    "noTelpPic": "089651524904",
+    "kendala": "Mengantuk",
+    "catatanTambahan": "kurang tidur",
+    "noRekening": "ABC",
+    "cif": "DEF",
+    "noTelpNasabah": "08914514",
+    "sfsf": "fsfsf",
+    "startTime": "2025-08-29T14:22:37Z",
+    "stopTime": "2025-08-29T14:23:09Z"
+  },
+  {
+    "nama": "bostang palaguna",
+    "npp": "42414",
+    "cabang": "bekasi",
+    "noTelpPic": "08951524",
+    "kendala": "afadafs",
+    "catatanTambahan": "fasfsafasfsf",
+    "startTime": "2025-08-29T14:44:44Z",
+    "stopTime": "2025-08-29T14:44:59Z"
+  }
+]

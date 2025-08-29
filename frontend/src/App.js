@@ -3,7 +3,9 @@ import LandingPage from './components/LandingPage';
 import NoteForm from './components/NoteForm';
 import NoteList from './components/NoteList';
 import DatePicker from './components/DatePicker';
+import ExtensionList from './components/ExtensionList';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('landing');
@@ -37,6 +39,8 @@ function App() {
 
   return (
     <div>
+      <ExtensionList />
+
       {currentPage === 'landing' && <LandingPage onCreateNote={handleCreateNote} onViewNotes={handleViewNotes} />}
       {currentPage === 'create' && <NoteForm startTime={startTime} onSave={handleSaveNote} onGoBack={handleGoBack} />}
       {currentPage === 'date-picker' && <DatePicker onSelectDate={handleSelectDate} onGoBack={handleGoBack} />}

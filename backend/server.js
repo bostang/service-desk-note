@@ -10,12 +10,37 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-const dataDir = path.join(__dirname, 'data');
+// --- START: PERUBAHAN UTAMA ---
+// Ubah jalur dataDir ke subfolder 'records'
+const dataDir = path.join(__dirname, 'data', 'records');
+// --- END: PERUBAHAN UTAMA ---
+
+// Pastikan folder 'data/records' ada. Jika tidak, buat folder tersebut.
 if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir);
+  fs.mkdirSync(dataDir, { recursive: true });
 }
 
-// Helper function untuk mendapatkan nama file harian
+// Endpoint untuk mendapatkan data kontak PIC dari file JSON (tanpa perubahan)
+app.get('/api/pic-contacts', (req, res) => {
+  const filePath = path.join(__dirname, 'data', 'specialist.json');
+  fs.readFile(filePath, 'utf8', (err, data) => {
+    if (err) {
+      if (err.code === 'ENOENT') {
+        return res.status(404).json({});
+      }
+      console.error('Gagal membaca file specialist.json:', err);
+      return res.status(500).json({ message: 'Gagal memuat data kontak.' });
+    }
+    try {
+      const contacts = JSON.parse(data);
+      res.json(contacts);
+    } catch (e) {
+      console.error('Error parsing JSON dari specialist.json:', e);
+      res.status(500).json({ message: 'Data file rusak.' });
+    }
+  });
+});
+
 const getTodayFileName = () => {
   const now = new Date();
   const year = now.getFullYear();
@@ -24,11 +49,10 @@ const getTodayFileName = () => {
   return `${year}-${month}-${day}.json`;
 };
 
-// Endpoint untuk menyimpan data, tetap sama
 app.post('/save-data', (req, res) => {
   const newData = req.body;
   const fileName = getTodayFileName();
-  const dataPath = path.join(dataDir, fileName);
+  const dataPath = path.join(dataDir, fileName); // Menggunakan dataDir yang baru
 
   fs.readFile(dataPath, (err, data) => {
     let records = [];
@@ -50,25 +74,22 @@ app.post('/save-data', (req, res) => {
   });
 });
 
-// Endpoint BARU untuk mendapatkan daftar file (tanggal) yang tersedia
 app.get('/available-dates', (req, res) => {
   fs.readdir(dataDir, (err, files) => {
     if (err) {
       console.error("Gagal membaca direktori data:", err);
       return res.status(500).json([]);
     }
-    // Filter hanya file JSON dan ambil nama dasarnya
     const dates = files
       .filter(file => file.endsWith('.json'))
       .map(file => file.replace('.json', ''));
-    res.json(dates.sort().reverse()); // Urutkan dari yang terbaru
+    res.json(dates.sort().reverse());
   });
 });
 
-// Endpoint BARU untuk mendapatkan data dari tanggal tertentu
 app.get('/get-data/:date', (req, res) => {
     const fileName = `${req.params.date}.json`;
-    const dataPath = path.join(dataDir, fileName);
+    const dataPath = path.join(dataDir, fileName); // Menggunakan dataDir yang baru
 
     fs.readFile(dataPath, (err, data) => {
         if (err) {
@@ -87,11 +108,10 @@ app.get('/get-data/:date', (req, res) => {
     });
 });
 
-// Endpoint yang DIMODIFIKASI untuk menghapus catatan
 app.delete('/delete-note/:date/:index', (req, res) => {
   const indexToDelete = parseInt(req.params.index, 10);
   const fileName = `${req.params.date}.json`;
-  const dataPath = path.join(dataDir, fileName);
+  const dataPath = path.join(dataDir, fileName); // Menggunakan dataDir yang baru
 
   fs.readFile(dataPath, (err, data) => {
     if (err) {
@@ -125,12 +145,11 @@ app.delete('/delete-note/:date/:index', (req, res) => {
   });
 });
 
-// Endpoint yang DIMODIFIKASI untuk mengedit catatan
 app.put('/edit-note/:date/:index', (req, res) => {
   const indexToEdit = parseInt(req.params.index, 10);
   const updatedData = req.body;
   const fileName = `${req.params.date}.json`;
-  const dataPath = path.join(dataDir, fileName);
+  const dataPath = path.join(dataDir, fileName); // Menggunakan dataDir yang baru
 
   fs.readFile(dataPath, (err, data) => {
     if (err) {

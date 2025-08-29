@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const NoteEdit = ({ note, index, onFinishEdit }) => { // Terima 'index'
+// Tambahkan 'date' sebagai prop yang diterima
+const NoteEdit = ({ note, index, date, onFinishEdit }) => {
   const [editedNote, setEditedNote] = useState({ ...note });
 
   const handleChange = (e) => {
@@ -13,8 +14,8 @@ const NoteEdit = ({ note, index, onFinishEdit }) => { // Terima 'index'
   const handleSave = async (e) => {
     e.preventDefault();
     try {
-      // Gunakan 'index' dalam URL
-      const response = await axios.put(`http://localhost:5000/edit-note/${index}`, editedNote);
+      // Gunakan 'date' dan 'index' dalam URL
+      const response = await axios.put(`http://localhost:5000/edit-note/${date}/${index}`, editedNote);
       alert(response.data.message);
       onFinishEdit();
     } catch (error) {
@@ -36,7 +37,7 @@ const NoteEdit = ({ note, index, onFinishEdit }) => { // Terima 'index'
                 className="form-control" 
                 id={key} 
                 name={key} 
-                value={value || ''} // tambahkan || '' untuk menghindari error
+                value={value || ''}
                 onChange={handleChange} 
               />
             </div>

@@ -58,5 +58,34 @@
     "catatanTambahan": "fasfsafasfsf",
     "startTime": "2025-08-29T14:44:44Z",
     "stopTime": "2025-08-29T14:44:59Z"
+  },
+  {
+    "nama": "Bostang Palaguna",
+    "npp": "70556",
+    "cabang": "bekasi",
+    "noTelpPic": "08951524904",
+    "aplikasi": "BNIDirect",
+    "kendala": "Tidak mampu melakukan transaksi payroll di perusahaan PT terkait",
+    "catatanTambahan": "Belum melakukan login pada menu",
+    "extraFields": [
+      {
+        "name": "No. Rekening",
+        "value": "1406910123"
+      },
+      {
+        "name": "CIF",
+        "value": "424252343"
+      },
+      {
+        "name": "No. Telepon Nasabah",
+        "value": "6289651524904"
+      },
+      {
+        "name": "Nama Perusahaan",
+        "value": "PT Sejahtera Makmur Jaya"
+      }
+    ],
+    "startTime": "2025-08-29T17:30:14Z",
+    "stopTime": "2025-08-29T17:31:22Z"
   }
 ]

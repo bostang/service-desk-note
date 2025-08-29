@@ -3,29 +3,38 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NoteDetail from './NoteDetail';
 
-const NoteList = ({ onGoBack }) => {
+const NoteList = ({ selectedDate, onGoBack }) => {
   const [notes, setNotes] = useState([]);
   const [viewedNote, setViewedNote] = useState(null);
   const [viewedIndex, setViewedIndex] = useState(null);
 
   const fetchNotes = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/get-data');
-      setNotes(response.data);
+      // Pastikan selectedDate ada sebelum membuat permintaan
+      if (selectedDate) {
+        const response = await axios.get(`http://localhost:5000/get-data/${selectedDate}`);
+        setNotes(response.data);
+      }
     } catch (error) {
       console.error("Gagal mengambil data:", error);
+      setNotes([]);
     }
   };
 
   useEffect(() => {
-    fetchNotes();
-  }, []);
+    // Panggil fetchNotes hanya jika selectedDate berubah dan bukan null
+    if (selectedDate) {
+      fetchNotes();
+    }
+  }, [selectedDate]); // Dependency array memastikan ini berjalan saat selectedDate berubah
 
   const handleDelete = async (indexToDelete) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/delete-note/${indexToDelete}`);
-      alert(response.data.message);
-      fetchNotes();
+      if (selectedDate) {
+        const response = await axios.delete(`http://localhost:5000/delete-note/${selectedDate}/${indexToDelete}`);
+        alert(response.data.message);
+        fetchNotes();
+      }
     } catch (error) {
       alert("Gagal menghapus note.");
       console.error("Ada kesalahan:", error);
@@ -44,7 +53,7 @@ const NoteList = ({ onGoBack }) => {
   };
 
   if (viewedNote) {
-    return <NoteDetail note={viewedNote} index={viewedIndex} onGoBack={handleBackToList} />;
+    return <NoteDetail note={viewedNote} index={viewedIndex} selectedDate={selectedDate} onGoBack={handleBackToList} />;
   }
 
   return (
@@ -55,7 +64,7 @@ const NoteList = ({ onGoBack }) => {
         </button>
       </div>
 
-      <h2 className="text-center mb-4">Daftar Catatan Kendala</h2>
+      <h2 className="text-center mb-4">Daftar Catatan Kendala ({selectedDate})</h2>
       {notes.length > 0 ? (
         <div style={{ overflowX: 'auto' }}>
           <table className="table table-striped table-bordered">
@@ -81,7 +90,6 @@ const NoteList = ({ onGoBack }) => {
                       ? note.kendala.substring(0, 100) + '...'
                       : note.kendala}
                   </td>
-                  {/* MODIFIKASI PENTING DI SINI */}
                   <td className="d-flex flex-column align-items-center justify-content-center"> 
                     <button className="btn btn-info btn-sm mb-1 w-100" onClick={() => handleViewDetail(note, index)}>
                       View Detail
@@ -96,7 +104,7 @@ const NoteList = ({ onGoBack }) => {
           </table>
         </div>
       ) : (
-        <p className="text-center">Belum ada catatan yang tersimpan.</p>
+        <p className="text-center">Tidak ada catatan yang tersimpan untuk tanggal ini.</p>
       )}
     </div>
   );
